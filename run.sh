@@ -19,6 +19,11 @@ if [ -z "$CONSUL_TOKEN" ]; then
     exit 1
 fi
 
+if [ "CF_INSTANCE_INDEX" == "0" ]; then
+   BOOTSTRAP="-bootstrap"
+fi
+
+
 echo "[run] Datacenter: $CONSUL_DC"
 echo "[run] Host: $CF_INSTANCE_INTERNAL_IP"
 echo "[run] Port: $PORT"
@@ -38,4 +43,4 @@ cat <<EOF > /app/config/acl.json
 }
 EOF
 
-/app/consul agent -config-dir=/app/config -bootstrap -server -data-dir=/tmp -bind=$CF_INSTANCE_INTERNAL_IP -client=$CF_INSTANCE_INTERNAL_IP -http-port=$PORT -ui
+/app/consul agent -config-dir=/app/config $BOOTSTRAP -server -data-dir=/tmp -bind=$CF_INSTANCE_INTERNAL_IP -client=$CF_INSTANCE_INTERNAL_IP -http-port=$PORT -ui
