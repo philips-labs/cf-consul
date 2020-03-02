@@ -1,5 +1,5 @@
 FROM alpine:latest AS builder
-ENV CONSUL_VERSION 1.2.2
+ENV CONSUL_VERSION 1.7.1
 
 
 WORKDIR /consul
