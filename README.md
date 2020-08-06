@@ -12,7 +12,8 @@ Consul cluster release on Cloudfoundry
 ## deployment
 
 1. Use the `manifest.example.yml` as a template and deploy
-2. Run `init-cluster.sh` to initialize the cluster
+2. Run `create-network-policies.sh` to set up the network policies for Raft
+3. Run `init-cluster.sh` to initialize the cluster
 
 ## operating
 
