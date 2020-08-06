@@ -1,0 +1,10 @@
+---
+applications:
+- name: consul
+  docker:
+    image: loafoe/cf-consul:1.8.0-202008051625
+  env:
+    CONSUL_TOKEN: "T0K3n"
+    GOSSIP_TOKEN: "G0551PT0ken"
+  instances: 3
+  memory: 128M

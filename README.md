@@ -1,6 +1,6 @@
-# Consul
+# cf-consul
 
-Consul release for PHS
+Consul release on Cloudfoundry
 
 ## configuration
 
@@ -8,3 +8,6 @@ Consul release for PHS
 |-----|-------------|---------|----------|
 | CONSUL\_DC | Datacenter name | us-east | N |
 | CONSUL\_TOKEN | Master token value | | Y |
+
+## license
+License is MIT

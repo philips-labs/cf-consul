@@ -1,0 +1,8 @@
+instances: 3
+
+consul_app: consul
+
+consul_docker_image: loafoe/cf-consul:latest
+
+external_domain: cloud.pcftest.com
+internal_domain: apps.internal
